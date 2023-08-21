@@ -1,0 +1,183 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200&family=Roboto:wght@200;200&display=swap" rel="stylesheet"> 
+   <style>
+    body{
+    background-color:#27044B;
+            color:white;
+        }
+
+        .container{
+            background-color: rgb(107, 39, 176, 0.2);
+            display:flex;
+            flex-direction: column;
+            margin-top:160px;
+            margin-left:00px;
+            height:1000px;
+            width:785px;
+            border:1px rgb(255, 255, 255, 0.2) solid;
+            border-radius:20px;
+        
+            font-family: 'Open Sans', sans-serif;
+            
+        }
+        .heading{
+            margin-top:60px;
+            margin-bottom:25px;
+            margin-left:55px;
+            font-size:50px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .field{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .container span, ul{
+            color: rgb(169, 168, 168);
+        }
+        ul{
+            margin-left:40px;
+            margin-top:20px;
+            margin-bottom:0px;
+        }
+
+        .container input{
+            background-color: rgb(235, 238, 248, 0.1);
+            border:none;
+            font-size:20px;
+            width: 370px;
+            
+            margin-right:100px;
+            
+            margin-top:40px;
+            /* margin-bottom:18px; */
+            padding-left:12px;
+            height:60px;
+            border-radius:10px;
+            color:white;
+            border: 1px rgb(255, 255, 255, 0.1) solid;
+        
+        }
+
+        .container input::placeholder{
+            font-family: 'Open Sans', sans-serif;
+            font-size:20px;
+            color:white;
+        }
+
+        .input{
+            margin-left:70px;
+            font-size: 23px;
+            margin-top:40px;
+        }
+
+        .button-login{
+            width:130px;
+            height:50px;
+            font-size:22px;
+            background-color: white;
+            color:rgb(6, 6, 6);
+            border:none;
+            margin-top:70px;
+            margin-left:605px;
+            border-radius:10px;
+        }
+        .forgot{
+            margin-top:85px;
+            margin-right:40px;
+            font-size:20px;
+
+        }
+        .color1{
+            width:100px;
+            height:100px;
+            border-radius: 50px;
+            background-color: #871498;
+            margin-top:600px;
+            margin-left:300px;
+            filter:blur(20px);
+        }
+
+        .color2{
+            width:300px;
+            height:300px;
+            border-radius: 150px;
+            background-color: #53189F;
+            margin-top:100px;
+            filter:blur(50px)
+        
+        }
+        .page{
+            display:flex;
+            flex-direction: row;
+            flex-shrink:0;
+        }
+
+   </style>
+<title>Document</title>
+</head>
+<body >
+    
+    <div class="page">
+        <div class="color1"></div>
+
+        <form class="container" method="post" >
+            <div class="heading">Sign Up</div>
+            {% csrf_token %}
+            <div class="field">
+                <div class="input">{{ form.username.label }}</div>
+                <div class="box">{{ form.username }}</div>
+            </div>
+            
+            <div class="field">
+                <div class="input">{{ form.age.label }}</div>
+                <div class="box_age">{{ form.age }}</div>    
+            </div>
+
+            <div class="field">
+                <div class="input">{{ form.mobile_number.label }}</div>
+                <div class="box"> {{ form.mobile_number }}</div>
+            </div>
+            
+            <div class="field">
+                <div class="input">{{ form.password1.label }}</div>
+                <div class="box">{{ form.password1 }}</div>
+            </div>
+            <ul>
+                <li>Your password can’t be too similar to your other personal information.</li>
+                <li>Your password must contain at least 8 characters.</li>
+                <li>Your password can’t be a commonly used password.</li>
+                <li>Your password can’t be entirely numeric.</li>
+            </ul>
+            <div class="field">
+                <div class="input">{{ form.password2.label }}</div>
+                <div class="box">{{ form.password2 }}</div>
+            </div>
+            
+            
+            
+                <div><button  class="button-login" type="submit">Sign Up</button></div>
+                
+            
+        </form>
+
+        <div class="color2"></div>
+    </div>
+    
+</body>
+</html>

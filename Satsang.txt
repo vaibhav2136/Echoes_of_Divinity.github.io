@@ -1,0 +1,11 @@
+Satsang
+
+-> make a directory(satsang)
+  -> make a project and app
+    -> we'll use customUser authentication
+      (custom model, forms for addding users and altering user's data by admin, customadmin class{which forms to use in different context, which model to use for user authentication}, and how you want fields to be displyed on the admin page )
+
+->made template folder 
+  -> made views and set urls for different pages and actions.
+-> static files.
+

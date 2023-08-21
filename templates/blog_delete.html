@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200&family=Roboto:wght@200;200&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{object.title}}</title>
+    <style>
+        body{
+            background-color: rgb(32, 3, 62);
+            color:white;
+            font-family: 'Open Sans', sans-serif;
+           
+            
+        }
+
+        .delete-button{
+            margin-top:20px;
+            margin-left:200px;
+            background-color:#E30B0B ;
+            border:none;
+            width:108px;
+            height:45px;
+            margin-right:20px;
+            color:white;
+            font-size:24px;
+        
+        }
+        div{
+            margin-left:30%;
+            margin-top:100px;
+            background-color: rgb(257,257,257, 0.1);
+            width:400px;
+            padding:20px;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>{{object.title}}</h1>
+   
+        <form method="post">
+            {% csrf_token %}
+            <p>Are you sure, you want to delete this post?</p>
+            {{form.as_p}}
+            
+            <button class="delete-button" type="submit" >Delete</button>
+        </form>
+    </div>
+        
+   
+   
+</body>
+</html>

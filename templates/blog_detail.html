@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200&family=Roboto:wght@200;200&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+    <title>blog_detail</title>
+</head>
+<body>
+    <div class="posts-config">
+        <div class="name"><h1>{{ object.title }}</h1></div>
+        <div class="post">
+            {{object.content|linebreaks|safe }}
+        </div>
+        
+    </div>
+    
+</body>
+</html>
+
+
+<style>
+    body{
+        background-color:rgb(32, 3, 62);
+        height:2000px;
+        font-family: 'Open Sans', sans-serif;
+
+    }
+
+    .name{
+        height: 200px;
+        padding-bottom:0px;
+        margin-top:100px;
+    }
+
+    .name h1{
+    
+        font-size:40px;
+        color:white;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom:0px;
+    
+    }
+
+    .posts-config{
+        margin-top:50px;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+
+    }
+    .post{
+        background-color: rgb(108, 39, 176, 0.4);
+        
+       
+        width:40%;
+        color:white;
+        padding-left:50px;
+        padding:12px;
+        padding-bottom:50px;
+        margin-top:0px;
+    
+    }
+    .post p{
+       
+        margin-left:20%;
+    }
+   
+
+</style>

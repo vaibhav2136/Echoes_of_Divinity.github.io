@@ -1,0 +1,114 @@
+body{
+    background-color:#27044B;
+    color:white;
+}
+
+.container{
+    background-color: rgb(107, 39, 176, 0.2);
+    display:flex;
+    flex-direction: column;
+    margin-top:160px;
+    margin-left:00px;
+    height:1000px;
+    width:785px;
+    border:1px rgb(255, 255, 255, 0.2) solid;
+    border-radius:20px;
+   
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.heading{
+    margin-top:60px;
+    margin-bottom:25px;
+    margin-left:55px;
+    font-size:50px;
+    font-family: 'Open Sans', sans-serif;
+}
+.field{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.container span, ul{
+    color: rgb(169, 168, 168);
+}
+ul{
+    margin-left:40px;
+    margin-top:20px;
+    margin-bottom:0px;
+}
+
+.container input{
+    background-color: rgb(235, 238, 248, 0.1);
+    border:none;
+    font-size:20px;
+    width: 370px;
+    
+    margin-right:100px;
+    
+    margin-top:40px;
+    /* margin-bottom:18px; */
+    padding-left:12px;
+    height:60px;
+    border-radius:10px;
+    color:white;
+    border: 1px rgb(255, 255, 255, 0.1) solid;
+   
+}
+
+.container input::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-size:20px;
+    color:white;
+}
+
+.input{
+    margin-left:70px;
+    font-size: 23px;
+    margin-top:40px;
+}
+
+.button-login{
+    width:130px;
+    height:50px;
+    font-size:22px;
+    background-color: white;
+    color:rgb(6, 6, 6);
+    border:none;
+    margin-top:70px;
+    margin-left:605px;
+    border-radius:30px;
+}
+.forgot{
+    margin-top:85px;
+    margin-right:40px;
+    font-size:20px;
+
+}
+.color1{
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+    background-color: #871498;
+    margin-top:600px;
+    margin-left:300px;
+    filter:blur(20px);
+}
+
+.color2{
+    width:300px;
+    height:300px;
+    border-radius: 150px;
+    background-color: #53189F;
+    margin-top:100px;
+    filter:blur(50px)
+   
+}
+.page{
+    display:flex;
+    flex-direction: row;
+    flex-shrink:0;
+}

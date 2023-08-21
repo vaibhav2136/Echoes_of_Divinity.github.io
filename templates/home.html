@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200&family=Roboto:wght@200;200&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap'); 
+        body{
+            background-color:rgb(32, 3, 62); 
+            background-size: 100%;
+            color: white;
+            width: 100%;
+            overflow-x: hidden;
+            height:5000px;
+            margin:0px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        
+        .navbar{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+           
+            /* align-items: center; */
+        }
+        a{
+            color:white;
+            font-size:20px;
+            text-decoration: none;
+        }
+        .signup{
+            background: none;
+            color: white;
+            border:none;
+            font-size:20px;
+            
+           
+        }
+        .signup a{
+            color: white;
+            text-decoration: none;
+        }
+        .login{
+            background-color:#26034B;
+            width:90px;
+            height:43px;
+            
+            border-radius: 5px;
+            border: 1px rgba(255, 255, 255, 0.6) solid ;
+            margin-right:30px;
+            margin-top:30px;
+            margin-left:20px;
+            
+            font-size:20px;
+        }
+        .login a{
+            color: white;
+            text-decoration: none;
+        }
+        
+        .main_page{
+            display: flex;
+            flex-direction: row;
+        
+        }
+        
+        .pink-box{
+            height:100px;
+            width:100px;
+            background-color:#990be6 ;
+            margin-top:170px;
+            margin-left:50px;
+            border-radius:50px;
+            filter :blur(60px);
+            position:absolute;
+        }
+        
+        .black-box{
+            height:300px;
+            width:500px;
+            background-color:#990be6  ;
+            margin-top:380px;
+            margin-left:1350px;
+            border-radius:250px;
+            filter :blur(80px);
+            position:absolute;
+        }
+        
+        .main-heading{
+            color:white;
+            margin-left:380px;
+            margin-top:200px;
+            font-size:70px;
+            
+        }
+        .main-heading h1{
+            margin-bottom:30px;
+            letter-spacing: 5px;
+            font-family: 'Alumni Sans Pinstripe', sans-serif;
+            
+        }
+        
+        
+        .para{
+            margin-left:610px;
+           
+            
+            color:rgba(255, 255, 255, 0.877);
+           
+            font-size:20px;
+            margin-top:10px;
+            
+        }
+        
+        
+        .quote{
+            font-size:25px;
+            width:100%;
+            height:260px;
+            margin-left:0px;
+            margin-top:350px;
+            background-color:#1c0338;
+            padding-top:60px;
+            padding-left:300px;
+            z-index:0;
+            color:rgb(9, 240, 140)
+           
+        }
+        .quote span{
+            color:rgb(252, 251, 251);
+        }
+        
+        .parallex{
+            height:450px;
+            width:110%;
+            overflow-y: hidden;
+            background-image: url("/static/img/mahabharat.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+        }
+        .cards{
+            height: 1200px;
+            width:100%;
+            /* background-color:#1c0338; */
+            background-color: white;
+        }
+        .last-cards{
+            display: flex;
+            flex-direction: row;
+            margin-top:600px;
+            padding-bottom:200px;
+            margin-bottom:0px;
+            background-color: #1c0338;
+        
+        }
+        
+        .last-quote1{
+            background-color:rgba(255, 255, 255, 0.1);
+            width:387px;
+            height: 410px;
+            margin-left:400px;
+            margin-top:100px;
+            border:1px rgb(255, 255, 255,0.2) solid;
+            border-radius: 10px;
+            padding:40px;
+            font-size:26px;
+        }
+        
+        .last-quote2{
+            background-color:rgba(28, 3, 56, 0.572);
+            background-color:rgba(255, 255, 255, 0.1);
+            width:350px;
+            height: 550px;
+            margin-left:-60px;
+            margin-top:350px;
+            /* transform: translate(-50px); */
+            border-radius: 10px;
+            border:1px rgb(255, 255, 255,0.2) solid;
+            padding:60px;
+            padding-left:120px;
+            font-size:26px;
+        }
+        
+        .end{
+            background-color: rgb(18, 1, 33);
+            width:100%;
+            margin-top:0px;
+            height: 700px;
+        }
+        
+        .cards{
+            width:70%;
+            overflow:hidden;
+            margin-top:540px;
+            margin-left:270px;
+            margin-right:200px;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            background:none;
+            scroll-behavior: smooth;
+            
+        }
+        .cards{
+            height:450px;
+        }
+        
+        .cards div{
+            height:450px;
+            margin-left:10px;
+            margin-right:20px;
+            width:330px;
+            border-radius:10px;
+           
+            
+        }
+        
+        .cards img{
+            height:100%;
+            width:330px;
+            
+            object-fit:cover;
+            border-radius:10px;
+        }
+        
+        .wrapper i{
+           
+            width:44px;
+            font-size:20px;
+            color:black;
+            text-align:center;
+            padding: 10px 0px;
+            cursor:pointer;
+            position:absolute;
+            border-radius: 23px;
+            background-color: white;
+           
+        }
+        
+        .wrapper i:first-child{
+            left:190px;
+            margin-top:220px;
+        }
+        
+        .wrapper i:last-child{
+            right:90px;
+            margin-top:-220px;
+        }
+        
+        .cards.dragging{
+            
+            scroll-behavior:smooth;
+        
+        }
+        
+        .cards.dragging img{
+            pointer-events: none;
+        }
+        
+        
+    </style>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <div class="left"></div>
+        <div class="right">
+            {% if user.is_authenticated %}
+                <a href="{% url 'userbloglist' name=users.id %}">My Blogs</a>
+                <button class="login"><a href="{% url 'logout' %}">log Out</a></button>
+                
+            {% else %}
+                <button class="signup"><a href="{% url 'signup' %}">Sign Up</a></button>
+                <button class="login"><a href="{% url 'login' %}">log In</a></button>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="pink-box">
+    </div>
+
+    <div class="black-box">
+    </div>
+
+    <div class="main-heading">
+        <h1>Echoes of Divinity</h1>
+    </div>
+
+    <p class="para">Unraveling the Threads of Sacred Legacies</p>
+   
+    <div class="quote">
+    <p>" O Arjuna, perform your duties established in yoga, <span>abandoning<br> attachment, and remain even-minded in success and failure. <br>This evenness of mind is called yoga. "</span><br></p>
+    </div>
+
+    <div class="parallex"> </div>
+   
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="cards">
+            {% for post in categories %}
+            <div>
+                <a href="{% url 'bloglist' cats=post.name %}"><img src='{{ post.image}}'></a>
+               
+                
+               
+
+            </div>
+            {% endfor %}
+            
+        
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+
+
+
+
+  
+
+    
+    
+    <div class="last-cards">
+        <div class="last-quote1">"जीवन को सफल बनाने के<br> <br> लिए,
+            सच्चे प्रेम में खो जाओ,<br><br>
+             भगवान के चरणों में आत्मा <br><br>
+            को समर्पित कर दो।"<br><br><pre>      - कृपालु जी महाराज</pre>
+            
+            
+        </div>
+        <div class="last-quote2">"Lost in the ecstasy of<br><br> 
+            divine love,<br><br> 
+            I dance to the melodies of <br><br> 
+            devotion,<br><br> 
+             my heart a temple where<br><br> 
+             Krishna <br><br> 
+            resides, guiding me on this <br><br> 
+            eternal journey." <br><br> 
+            
+            <pre>          - Meera Bai</pre>
+        </div>
+    </div>
+    
+    <div class="end"></div>
+    
+
+     <script>
+        ScrollReveal({
+            reset:true,
+            distance:'70px',
+            duration:2000,
+            delay:100
+        });
+
+        ScrollReveal().reveal('.last-quote1', {delay:400, origin:'left'})
+        ScrollReveal().reveal('.last-quote2', {delay:400, origin:'bottom'})
+
+        const cards = document.querySelector(".cards"),
+        firstImg = cards.querySelectorAll("div")[0];
+        const arrowIcons = document.querySelectorAll(".wrapper i");
+        
+
+        let isDragStart = false, prevPageX, prevScrollLeft;
+        let firstImgWidth = firstImg.clientWidth + 390;
+
+        arrowIcons.forEach(icon => {
+            icon.addEventListener("click", ()=> {
+                // cards.scrollLeft += icon.id == "right"? -firstImgwidth : firstImgWidth;
+                cards.scrollLeft += icon.id == "left"? -firstImgWidth : firstImgWidth;
+            })
+        })
+
+        const dragStart=(e) =>{
+            isDragStart=true;
+            prevPageX = e.pageX;
+            prevScrollLeft = cards.scrollLeft;
+
+        }
+
+        const dragging= (e)=>{
+            if(!isDragStart) return;
+            e.preventDefault();
+            cards.classList.add("dragging");
+            let positionDiff = e.pageX - prevPageX;
+            cards.scrollLeft= prevScrollLeft - positionDiff;
+        }
+
+        const dragStop=() =>{
+            isDragStart=false;
+            cards.classList.remove("dragging");
+        }
+
+        cards.addEventListener("mouseclick", dragStart);
+        cards.addEventListener("mousemove", dragging);
+        cards.addEventListener("mouseclick", dragStop);
+
+   </script>
+</body>
+</html>
